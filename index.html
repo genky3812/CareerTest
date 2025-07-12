@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>部署適性診断</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="app">
+        <!-- タイトル画面 -->
+        <div id="title-screen">
+            <h1>部署適性診断</h1>
+            <button class="btn" id="startBtn">スタート</button>
+        </div>
+
+        <!-- 質問画面 -->
+        <div id="question-screen" style="display: none;">
+            <h1 id="title">部署適性診断</h1>
+            <div class="question" id="question-container">質問がここに表示されます。</div>
+            <div id="buttons">
+                <button class="btn" id="yesBtn" data-weight="2">はい</button>
+                <button class="btn" id="neutralBtn" data-weight="0">どちらでもない</button>
+                <button class="btn" id="noBtn" data-weight="-2">いいえ</button>
+            </div>
+            <button class="btn" id="backBtn">戻る</button>
+        </div>
+
+        <!-- 結果画面 -->
+        <div id="result-screen" style="display: none;">
+            <h1>診断結果</h1>
+             <div id="result">
+        <img id="result-illustration" src="" alt="診断結果イラスト" style="max-width: 100%; height: auto; margin-bottom: 20px;">
+    </div>
+            <button class="btn" id="restartBtn">タイトルに戻る</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
