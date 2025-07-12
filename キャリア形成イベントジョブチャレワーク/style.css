@@ -1,0 +1,138 @@
+/* 全体のスタイル */
+body {
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    font-family: 'Poppins', sans-serif;
+    color: #2d3436;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* タイトルや見出しのサイズ調整 */
+h1 {
+    font-size: clamp(1.5em, 3vw, 2em); /* 最小1.5em、最大2em */
+    margin-bottom: 20px;
+    color: #2d3436;
+}
+
+h3 {
+    font-size: clamp(1.2em, 2.5vw, 1.5em); /* 動的に文字サイズを調整 */
+    color: #6A5ACD;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: clamp(1em, 2vw, 1.3em); /* 見出しのサイズも調整 */
+    color: #483D8B;
+    margin-top: 20px;
+}
+
+p {
+    font-size: clamp(0.9em, 2vw, 1.1em); /* 本文のサイズをレスポンシブに */
+    line-height: 1.6;
+}
+
+ul li {
+    font-size: clamp(0.9em, 2vw, 1.1em); /* 箇条書きも同様に調整 */
+    margin-bottom: 10px;
+}
+
+/* 診断コンテナ */
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* タイトル */
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #2d3436;
+}
+
+/* 質問のテキスト */
+.question {
+    font-size: 1.2em;
+    margin: 20px 0;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* ボタン */
+.btn {
+    background: linear-gradient(135deg, #74b9ff, #0984e3);
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 診断結果画面の文字とイラスト調整 */
+
+#result-illustration {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 100%; /* 親要素の幅に合わせる */
+    height: auto; /* アスペクト比を保持 */
+    object-fit: contain; /* 全体を表示する */
+    border-radius: 10px; /* 角を丸める */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+#result-illustration {
+ max-height: 50vh; /* 画面の50%の高さを上限にする */
+    width: auto; /* 幅を自動調整 */
+}
+
+/* 結果画面の全体調整 */
+
+#result {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto; /* 全体を中央配置 */
+    text-align: center; /* テキストを中央揃え */
+    line-height: 1.8; /* 行間を調整 */
+    padding: 20px; /* 内側の余白を追加 */
+    box-sizing: border-box; /* パディングを含む幅調整 */
+}
+
+#result-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* 上詰めで揃える */
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    height: 100vh; /* 高さを画面全体に固定 */
+    overflow-y: auto; /* コンテンツが画面を超えた場合にスクロールを許可 */
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
