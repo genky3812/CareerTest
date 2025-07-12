@@ -115,7 +115,7 @@ function showTitleScreen() {
 
     // タイトル画面にイラストを追加
     titleScreen.innerHTML = `
-        <img src="title_screen_chibi.png" alt="タイトル画面イラスト" style="width: 80%; margin-bottom: 20px;">
+        <img src="title_screen_chibi1.png" alt="タイトル画面イラスト" style="width: 80%; margin-bottom: 20px;">
         <h1>部署適性診断</h1>
         <button class="btn" id="startBtn">スタート</button>
     `;
